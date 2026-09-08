@@ -24,8 +24,11 @@ env/
 *.cub
 *.jp2
 data/raw/issdc_extracted/
+data/processed/patches/
 
 # Output bundles
 dist/
 build/
 *.egg-info/
+outputs/
+data/demo_poc2/

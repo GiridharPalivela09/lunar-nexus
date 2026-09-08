@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="lunarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#090d16"/>
+  <circle cx="32" cy="32" r="28" fill="url(#lunarGlow)"/>
+  <circle cx="32" cy="32" r="18" fill="url(#moonGrad)"/>
+  <!-- Crater details -->
+  <circle cx="26" cy="26" r="4" fill="#475569" opacity="0.6"/>
+  <circle cx="38" cy="36" r="5" fill="#475569" opacity="0.6"/>
+  <circle cx="35" cy="22" r="2.5" fill="#475569" opacity="0.5"/>
+  <circle cx="23" cy="38" r="3" fill="#475569" opacity="0.5"/>
+  <!-- Orbit ring -->
+  <ellipse cx="32" cy="32" rx="26" ry="10" fill="none" stroke="#00e5ff" stroke-width="2" stroke-dasharray="4 2" transform="rotate(-25 32 32)"/>
+</svg>

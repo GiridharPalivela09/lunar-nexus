@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 from typing import List, Optional, Dict, Any, Tuple
-from datetime import datetime
+from datetime import datetime, timezone
 from pydantic import BaseModel, Field
 
 
@@ -81,7 +81,7 @@ class LunarObservation(BaseModel):
     
     # Additional raw metadata
     extra_metadata: Dict[str, Any] = Field(default_factory=dict)
-    ingested_at: datetime = Field(default_factory=datetime.utcnow)
+    ingested_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
     def to_summary_dict(self) -> Dict[str, Any]:
         return {
@@ -107,3 +107,61 @@ class CatalogQuery(BaseModel):
     start_time: Optional[datetime] = None
     end_time: Optional[datetime] = None
     limit: int = 50
+
+
+class ResolutionStrategy(str, Enum):
+    MATCH_COARSER = "match_coarser"    # Resample higher-res to match lower-res (recommended for feature stability)
+    MATCH_FINER = "match_finer"        # Upsample lower-res to match higher-res
+    NATIVE_PHYSICAL = "native_physical"  # Maintain native pixel GSD; patch dimensions in pixels will differ proportionally
+
+
+class PixelBox(BaseModel):
+    x: int = Field(..., description="Top-left X pixel coordinate")
+    y: int = Field(..., description="Top-left Y pixel coordinate")
+    width: int = Field(..., description="Width in pixels")
+    height: int = Field(..., description="Height in pixels")
+
+    @property
+    def bounds(self) -> Tuple[int, int, int, int]:
+        """Returns (min_x, min_y, max_x, max_y)."""
+        return (self.x, self.y, self.x + self.width, self.y + self.height)
+
+
+class PatchExtractionConfig(BaseModel):
+    patch_size: int = Field(512, description="Square patch dimension in pixels (or target size)")
+    stride: Optional[int] = Field(None, description="Sliding window stride in pixels (defaults to patch_size)")
+    min_overlap_pct: float = Field(5.0, description="Minimum ground overlap percentage required")
+    resolution_strategy: ResolutionStrategy = Field(
+        ResolutionStrategy.MATCH_COARSER, description="Strategy for handling differing spatial resolutions"
+    )
+    target_resolution_m: Optional[float] = Field(None, description="Explicit target GSD in meters (overrides strategy)")
+    output_format: str = Field("png", description="Image format for extracted patches (png or tif)")
+
+
+class ExtractedPatchPair(BaseModel):
+    pair_id: str
+    patch_index: int
+    source_product_id: str
+    reference_product_id: str
+    source_patch_path: str
+    reference_patch_path: str
+    ground_bbox: BoundingBox
+    source_pixel_box: PixelBox
+    reference_pixel_box: PixelBox
+    effective_resolution_m: float
+    overlap_pct: float
+    solar_incidence_diff_deg: Optional[float] = None
+    quality_score: float = Field(..., description="Composite quality/confidence score (0.0 to 1.0)")
+
+
+class PatchManifest(BaseModel):
+    source_product_id: str
+    reference_product_id: str
+    total_patches: int
+    intersection_bbox: BoundingBox
+    intersection_polygon: Optional[List[Tuple[float, float]]] = None
+    intersection_area_km2: float
+    config: PatchExtractionConfig
+    patches: List[ExtractedPatchPair] = Field(default_factory=list)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+

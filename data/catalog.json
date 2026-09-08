@@ -3,7 +3,7 @@
     "product_id": "ch2_ohr_ncp_20230915t041230_boguslawsky_d18",
     "mission": "CHANDRAYAAN-2",
     "sensor": "OHRC",
-    "acquisition_time": "2023-09-15T04:12:30.120000",
+    "acquisition_time": "2023-09-15T04:12:30",
     "spatial_resolution_m": 0.25,
     "crs": "Moon 2000 (IAU2000:30100)",
     "bbox": {
@@ -23,16 +23,14 @@
       "sub_solar_lon": null,
       "spacecraft_altitude_km": null
     },
-    "primary_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png",
-    "label_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.xml",
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18_preview.png",
+    "primary_image_path": "data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png",
+    "label_path": "data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.xml",
+    "preview_image_path": "data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png",
     "auxiliary_files": [],
     "source_url": null,
     "download_urls": {},
-    "extra_metadata": {
-      "pds4_source": "ch2_ohr_ncp_20230915t041230_boguslawsky_d18.xml"
-    },
-    "ingested_at": "2026-09-03T18:10:33.280521"
+    "extra_metadata": {},
+    "ingested_at": "2026-09-05T04:56:07.398647Z"
   },
   "M1345982701LR_BOGUSLAWSKY_REF": {
     "product_id": "M1345982701LR_BOGUSLAWSKY_REF",
@@ -58,16 +56,16 @@
       "sub_solar_lon": null,
       "spacecraft_altitude_km": null
     },
-    "primary_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png",
+    "primary_image_path": "data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png",
     "label_path": null,
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png",
+    "preview_image_path": "data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png",
     "auxiliary_files": [],
     "source_url": null,
     "download_urls": {
       "browse": "https://lroc.sese.asu.edu/data/..."
     },
     "extra_metadata": {},
-    "ingested_at": "2026-09-03T18:10:24.710743"
+    "ingested_at": "2026-09-05T04:56:07.984605Z"
   },
   "ch2_tmc_ncn_20230915t041000_boguslawsky_triplet": {
     "product_id": "ch2_tmc_ncn_20230915t041000_boguslawsky_triplet",
@@ -93,14 +91,14 @@
       "sub_solar_lon": null,
       "spacecraft_altitude_km": null
     },
-    "primary_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png",
+    "primary_image_path": "data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png",
     "label_path": null,
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png",
+    "preview_image_path": "data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png",
     "auxiliary_files": [],
     "source_url": null,
     "download_urls": {},
     "extra_metadata": {},
-    "ingested_at": "2026-09-03T18:10:24.781937"
+    "ingested_at": "2026-09-05T04:56:08.141604Z"
   },
   "nac.m1417928961le": {
     "product_id": "nac.m1417928961le",
@@ -149,7 +147,7 @@
     },
     "primary_image_path": null,
     "label_path": null,
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png",
+    "preview_image_path": "data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png",
     "auxiliary_files": [],
     "source_url": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1417928961le&product_idGeo=28830483",
     "download_urls": {
@@ -343,7 +341,7 @@
     },
     "primary_image_path": null,
     "label_path": null,
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png",
+    "preview_image_path": "data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png",
     "auxiliary_files": [],
     "source_url": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1417928961re&product_idGeo=28830487",
     "download_urls": {
@@ -537,7 +535,7 @@
     },
     "primary_image_path": null,
     "label_path": null,
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png",
+    "preview_image_path": "data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png",
     "auxiliary_files": [],
     "source_url": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1417929126le&product_idGeo=28830488",
     "download_urls": {
@@ -731,7 +729,7 @@
     },
     "primary_image_path": null,
     "label_path": null,
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png",
+    "preview_image_path": "data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png",
     "auxiliary_files": [],
     "source_url": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1417929126re&product_idGeo=28830489",
     "download_urls": {
@@ -925,7 +923,7 @@
     },
     "primary_image_path": null,
     "label_path": null,
-    "preview_image_path": "/Users/abhishekadari/projects/SIH-Lunar/data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png",
+    "preview_image_path": "data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png",
     "auxiliary_files": [],
     "source_url": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1417929185le&product_idGeo=28830491",
     "download_urls": {
@@ -1071,5 +1069,393 @@
       "Westernmost_longitude": "283.48"
     },
     "ingested_at": "2026-09-03T18:11:00.945311"
+  },
+  "nac.m1419447916le": {
+    "product_id": "nac.m1419447916le",
+    "mission": "LRO",
+    "sensor": "LRO_NAC",
+    "acquisition_time": "2022-10-03T14:50:49.334000",
+    "spatial_resolution_m": 1.535,
+    "crs": "Moon 2000 (IAU2000:30100)",
+    "bbox": {
+      "min_lat": -80.57,
+      "max_lat": -78.11,
+      "min_lon": 29.9,
+      "max_lon": 38.05
+    },
+    "footprint_polygon": [
+      [
+        29.9,
+        -80.5
+      ],
+      [
+        37.52,
+        -78.11
+      ],
+      [
+        38.05,
+        -78.16
+      ],
+      [
+        30.51,
+        -80.57
+      ],
+      [
+        29.9,
+        -80.5
+      ]
+    ],
+    "geometry": {
+      "solar_zenith_deg": 83.63,
+      "solar_azimuth_deg": null,
+      "incidence_angle_deg": 83.63,
+      "emission_angle_deg": 1.71,
+      "phase_angle_deg": 84.14,
+      "sub_solar_lat": null,
+      "sub_solar_lon": null,
+      "spacecraft_altitude_km": null
+    },
+    "primary_image_path": null,
+    "label_path": null,
+    "preview_image_path": "data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png",
+    "auxiliary_files": [],
+    "source_url": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1419447916le&product_idGeo=28855140",
+    "download_urls": {
+      "product_img": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916LE.IMG",
+      "product_xml": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916LE.xml",
+      "browse_tif": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916LE_pyr.tif",
+      "browse_xml": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916LE_pyr.xml",
+      "derived_kml": "https://ode.rsl.wustl.edu/moon/datafile/kmlfiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916LE_xml.kml",
+      "derived_gz": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916LE_xml.tar.gz",
+      "derived_zip": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916LE_xml.zip"
+    },
+    "extra_metadata": {
+      "BB_georeferenced": "True",
+      "Bundle_lid": "urn:nasa:pds:lro-l-lroc-2-edr",
+      "Center_georeferenced": "True",
+      "Center_latitude": "-79.356",
+      "Center_longitude": "34.4175",
+      "Collection_lid": "urn:nasa:pds:lro-l-lroc-2-edr:lrolrc_0053a_data",
+      "Comment": "TARGET OF OPPORTUNITY",
+      "Data_Set_Id": "lro-l-lroc-2-edr",
+      "Description": "Lunar Reconnaissance Orbiter Camera NAC EDR Product",
+      "Easternmost_longitude": "38.05",
+      "Emission_angle": "1.71",
+      "External_url": "https://data.lroc.im-ldi.com/lroc/view_lroc/LRO-L-LROC-2-EDR-V1.0/M1419447916LE",
+      "FilesURL": "https://ode.rsl.wustl.edu/moon/productfiles.aspx?product_id=nac.m1419447916le&product_idGeo=28855140",
+      "Footprint_C0_geometry": "POLYGON ((29.9 -80.5, 37.52 -78.11, 38.05 -78.16, 30.51 -80.57, 29.9 -80.5))",
+      "Footprint_geometry": "POLYGON ((29.9 -80.5, 37.52 -78.11, 38.05 -78.16, 30.51 -80.57, 29.9 -80.5))",
+      "Footprint_GL_geometry": "POLYGON ((29.9 -80.5, 37.52 -78.11, 38.05 -78.16, 30.51 -80.57, 29.9 -80.5))",
+      "Footprint_NP_geometry": "MULTIPOLYGON EMPTY",
+      "Footprint_souce": "PDS Archive Index Table",
+      "Footprint_SP_geometry": "POLYGON ((145501.78094696527 246914.4521719109, 166907.64019585086 257227.47455269258, 194467.16426259346 270483.22792875423, 222077.64991618512 283735.70889175835, 220376.93634864935 286993.33240785322, 199044.4166257373 276775.29306100123, 171463.2471463015 263540.5803909786, 143930.16680363633 250302.23158035579, 145501.78094696527 246914.4521719109))",
+      "Footprints_cross_meridian": "False",
+      "ihid": "LRO",
+      "iid": "LROC",
+      "Incidence_angle": "83.63",
+      "Label_product_type": "EDR",
+      "LabelFileName": "M1419447916LE.xml",
+      "LabelURL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916LE.xml",
+      "Map_resolution": "1.535",
+      "Maximum_latitude": "-78.11",
+      "Minimum_latitude": "-80.57",
+      "Observation_time": "2022-10-03T14:51:15.871Z",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Product Type set by ODE",
+          "NOTE: Instrument Host Id set by ODE",
+          "NOTE: Instrument Id set by ODE",
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: LROC map resolution updated from index table entry",
+          "NOTE: LROC emission angle updated from index table entry",
+          "NOTE: LROC incidence angle updated from index table entry",
+          "NOTE: LROC phase angle updated from index table entry",
+          "NOTE: LROC solar longitude updated from index table entry",
+          "NOTE: LROC solar distance updated from index table entry",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Index Record:",
+          "\"LROLRC_0053A\",\" LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916LE.IMG\",\"LRO\",\"LROC\",\"nacl002b417b\",\"M1419447916LE\",\"        v1.8\",\" MOON\",59741,   0.011,\" FIFTH EXTENDED SCIENCE MISSION\",\"                                                      TARGET OF OPPORTUNITY\",  0,\" 2022-10-03 14:50:48.294\",\" 2022-10-03 14:50:49.334\",\" 2022-10-03 14:51:42.409\",\" 1\",\"686501448:16842\",\" 686501449:19507\",\" 686501502:24392\",686501449,  19507,686501502,  24392,0.001011733,9.99999,\" LEFT\", 200,107,107, 15,\"  N/A\",999,999,\"                                   N/A\",99999,9999.99,999,9,3,1,0,  12.293,  21.556,  -7.281,   8.555,9999.999,9999.999,9999.999,9999.999,9999.999,9999.999, 52224,2532, 8,   1.46,  1.61,  1.535, 1.71, 83.63, 84.14,313.63,254.34,  0.88, 81.35,-79.32, 34.09,149740459.0,143.12,-79.36, 34.41,-80.50, 29.90,-78.11, 37.52,-78.16, 38.05,-80.57, 30.51,  73.08,1810.50,\"D\",\"-X\"",
+          "NOTE: Product Comment set from Index file RATIONALE_DESC field",
+          "NOTE: Product Lat/Lon Footprint set from Index file  fields UPPER RIGHT to LOWER LEFT corner Point fields",
+          "NOTE: Product Center Lat/Lon set from footprint",
+          "NOTE: LROC location data updated from index table entry"
+        ]
+      },
+      "pdsid": "nac.m1419447916le",
+      "PDSVolume_Id": "urn:nasa:pds:lro-l-lroc-2-edr:lrolrc_0053a_data",
+      "Phase_angle": "84.14",
+      "Pole_state": "none",
+      "Product_creation_time": "2022-10-06T03:12:57.000000Z",
+      "Product_files": {
+        "Product_file": [
+          {
+            "Creation_date": "2022-10-06T03:12:57.000000Z",
+            "Description": "PRODUCT DATA FILE",
+            "FileName": "M1419447916LE.IMG",
+            "KBytes": "132236",
+            "Type": "Product",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916LE.IMG"
+          },
+          {
+            "Description": "PDS4 PRODUCT LABEL FILE",
+            "FileName": "M1419447916LE.XML",
+            "KBytes": "13",
+            "Type": "Product",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916LE.xml"
+          },
+          {
+            "Description": "BROWSE IMAGE",
+            "FileName": "M1419447916LE_PYR.TIF",
+            "KBytes": "27001",
+            "Type": "Browse",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916LE_pyr.tif"
+          },
+          {
+            "Description": "BROWSE LABEL",
+            "FileName": "M1419447916LE_PYR.XML",
+            "KBytes": "2",
+            "Type": "Browse",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916LE_pyr.xml"
+          },
+          {
+            "Creation_date": "2023-04-11T02:14:53.326",
+            "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+            "FileName": "M1419447916LE_XML.KML",
+            "KBytes": "3",
+            "Type": "Derived",
+            "URL": "https://ode.rsl.wustl.edu/moon/datafile/kmlfiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916LE_xml.kml"
+          },
+          {
+            "Creation_date": "2023-04-11T02:14:53.271",
+            "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+            "FileName": "M1419447916LE_XML.TAR.GZ",
+            "KBytes": "3",
+            "Type": "Derived",
+            "URL": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916LE_xml.tar.gz"
+          },
+          {
+            "Creation_date": "2023-04-11T02:14:53.210",
+            "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+            "FileName": "M1419447916LE_XML.ZIP",
+            "KBytes": "17",
+            "Type": "Derived",
+            "URL": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916LE_xml.zip"
+          }
+        ]
+      },
+      "Product_lid": "urn:nasa:pds:lro-l-lroc-2-edr:lrolrc_0053a_data:nac.m1419447916le",
+      "Product_name": "M1419447916LE.IMG",
+      "Product_title": "Lunar Reconnaissance Orbiter Camera NAC EDR Product",
+      "Product_version_id": "2.0",
+      "ProductURL": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1419447916le&product_idGeo=28855140",
+      "pt": "EDRNAC4",
+      "RelativePathtoVol": "data\\esm5\\2022276\\nac\\",
+      "Solar_distance": "149740459",
+      "Solar_longitude": "143.12",
+      "SpaceCraft_clock_start_count": "1/686501449:19507",
+      "SpaceCraft_clock_stop_count": "1/686501502:24392",
+      "Start_orbit_number": "59741",
+      "Stop_orbit_number": "59741",
+      "Target_name": "MOON",
+      "UTC_start_time": "2022-10-03T14:50:49.334000Z",
+      "UTC_stop_time": "2022-10-03T14:51:42.409000Z",
+      "Westernmost_longitude": "29.9"
+    },
+    "ingested_at": "2026-09-05T04:56:20.836747Z"
+  },
+  "nac.m1419447916re": {
+    "product_id": "nac.m1419447916re",
+    "mission": "LRO",
+    "sensor": "LRO_NAC",
+    "acquisition_time": "2022-10-03T14:50:49.334000",
+    "spatial_resolution_m": 1.533,
+    "crs": "Moon 2000 (IAU2000:30100)",
+    "bbox": {
+      "min_lat": -80.51,
+      "max_lat": -78.06,
+      "min_lon": 29.3,
+      "max_lon": 37.54
+    },
+    "footprint_polygon": [
+      [
+        29.3,
+        -80.44
+      ],
+      [
+        37.01,
+        -78.06
+      ],
+      [
+        37.54,
+        -78.11
+      ],
+      [
+        29.91,
+        -80.51
+      ],
+      [
+        29.3,
+        -80.44
+      ]
+    ],
+    "geometry": {
+      "solar_zenith_deg": 83.66,
+      "solar_azimuth_deg": null,
+      "incidence_angle_deg": 83.66,
+      "emission_angle_deg": 1.16,
+      "phase_angle_deg": 83.24,
+      "sub_solar_lat": null,
+      "sub_solar_lon": null,
+      "spacecraft_altitude_km": null
+    },
+    "primary_image_path": null,
+    "label_path": null,
+    "preview_image_path": "data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png",
+    "auxiliary_files": [],
+    "source_url": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1419447916re&product_idGeo=28855141",
+    "download_urls": {
+      "product_img": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916RE.IMG",
+      "product_xml": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916RE.xml",
+      "browse_tif": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916RE_pyr.tif",
+      "browse_xml": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916RE_pyr.xml",
+      "derived_kml": "https://ode.rsl.wustl.edu/moon/datafile/kmlfiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916RE_xml.kml",
+      "derived_gz": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916RE_xml.tar.gz",
+      "derived_zip": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916RE_xml.zip"
+    },
+    "extra_metadata": {
+      "BB_georeferenced": "True",
+      "Bundle_lid": "urn:nasa:pds:lro-l-lroc-2-edr",
+      "Center_georeferenced": "True",
+      "Center_latitude": "-79.3018",
+      "Center_longitude": "33.8631",
+      "Collection_lid": "urn:nasa:pds:lro-l-lroc-2-edr:lrolrc_0053a_data",
+      "Comment": "TARGET OF OPPORTUNITY",
+      "Data_Set_Id": "lro-l-lroc-2-edr",
+      "Description": "Lunar Reconnaissance Orbiter Camera NAC EDR Product",
+      "Easternmost_longitude": "37.54",
+      "Emission_angle": "1.16",
+      "External_url": "https://data.lroc.im-ldi.com/lroc/view_lroc/LRO-L-LROC-2-EDR-V1.0/M1419447916RE",
+      "FilesURL": "https://ode.rsl.wustl.edu/moon/productfiles.aspx?product_id=nac.m1419447916re&product_idGeo=28855141",
+      "Footprint_C0_geometry": "POLYGON ((29.3 -80.44, 37.01 -78.06, 37.54 -78.11, 29.91 -80.51, 29.3 -80.44))",
+      "Footprint_geometry": "POLYGON ((29.3 -80.44, 37.01 -78.06, 37.54 -78.11, 29.91 -80.51, 29.3 -80.44))",
+      "Footprint_GL_geometry": "POLYGON ((29.3 -80.44, 37.01 -78.06, 37.54 -78.11, 29.91 -80.51, 29.3 -80.44))",
+      "Footprint_NP_geometry": "MULTIPOLYGON EMPTY",
+      "Footprint_souce": "PDS Archive Index Table",
+      "Footprint_SP_geometry": "POLYGON ((143821.60363854672 250012.44855030885, 165317.15310245243 260383.62130198028, 192871.21104060928 273651.59974223567, 220477.10249212 286916.3888620871, 218736.26320057389 290167.44214397675, 197306.16374326331 279892.173455235, 169728.23280956357 266645.84175836691, 142197.73380161863 253393.381423318, 143821.60363854672 250012.44855030885))",
+      "Footprints_cross_meridian": "False",
+      "ihid": "LRO",
+      "iid": "LROC",
+      "Incidence_angle": "83.66",
+      "Label_product_type": "EDR",
+      "LabelFileName": "M1419447916RE.xml",
+      "LabelURL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916RE.xml",
+      "Map_resolution": "1.533",
+      "Maximum_latitude": "-78.06",
+      "Minimum_latitude": "-80.51",
+      "Observation_time": "2022-10-03T14:51:15.871Z",
+      "ODE_notes": {
+        "ODE_note": [
+          "NOTE: Product Type set by ODE",
+          "NOTE: Instrument Host Id set by ODE",
+          "NOTE: Instrument Id set by ODE",
+          "NOTE: Label keyword Orbit number value used for start orbit number value",
+          "NOTE: Label keyword Orbit number value used for stop orbit number value",
+          "NOTE: LROC map resolution updated from index table entry",
+          "NOTE: LROC emission angle updated from index table entry",
+          "NOTE: LROC incidence angle updated from index table entry",
+          "NOTE: LROC phase angle updated from index table entry",
+          "NOTE: LROC solar longitude updated from index table entry",
+          "NOTE: LROC solar distance updated from index table entry",
+          "NOTE: Observation time set to mid-point between start time and stop time",
+          "NOTE: Index Record:",
+          "\"LROLRC_0053A\",\" LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916RE.IMG\",\"LRO\",\"LROC\",\"nacr002b417b\",\"M1419447916RE\",\"        v1.8\",\" MOON\",59741,   0.011,\" FIFTH EXTENDED SCIENCE MISSION\",\"                                                      TARGET OF OPPORTUNITY\",  0,\" 2022-10-03 14:50:48.294\",\" 2022-10-03 14:50:49.334\",\" 2022-10-03 14:51:42.409\",\" 1\",\"686501448:16842\",\" 686501449:19507\",\" 686501502:24392\",686501449,  19507,686501502,  24392,0.001011733,9.99999,\"RIGHT\", 191, 42, 42, 15,\"  N/A\",999,999,\"                                   N/A\",99999,9999.99,999,9,3,1,0,  12.293,  21.360,  -6.313,   8.343,9999.999,9999.999,9999.999,9999.999,9999.999,9999.999, 52224,2532, 8,   1.46,  1.61,  1.533, 1.16, 83.66, 83.24,288.29,251.53,  0.88, 81.35,-79.32, 34.09,149740459.0,143.12,-79.30, 33.87,-80.44, 29.30,-78.06, 37.01,-78.11, 37.54,-80.51, 29.91,  73.08,1810.50,\"D\",\"-X\"",
+          "NOTE: Product Comment set from Index file RATIONALE_DESC field",
+          "NOTE: Product Lat/Lon Footprint set from Index file  fields UPPER RIGHT to LOWER LEFT corner Point fields",
+          "NOTE: Product Center Lat/Lon set from footprint",
+          "NOTE: LROC location data updated from index table entry"
+        ]
+      },
+      "pdsid": "nac.m1419447916re",
+      "PDSVolume_Id": "urn:nasa:pds:lro-l-lroc-2-edr:lrolrc_0053a_data",
+      "Phase_angle": "83.24",
+      "Pole_state": "none",
+      "Product_creation_time": "2022-10-06T03:12:46.000000Z",
+      "Product_files": {
+        "Product_file": [
+          {
+            "Creation_date": "2022-10-06T03:12:46.000000Z",
+            "Description": "PRODUCT DATA FILE",
+            "FileName": "M1419447916RE.IMG",
+            "KBytes": "132236",
+            "Type": "Product",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916RE.IMG"
+          },
+          {
+            "Description": "PDS4 PRODUCT LABEL FILE",
+            "FileName": "M1419447916RE.XML",
+            "KBytes": "13",
+            "Type": "Product",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/DATA/ESM5/2022276/NAC/M1419447916RE.xml"
+          },
+          {
+            "Description": "BROWSE IMAGE",
+            "FileName": "M1419447916RE_PYR.TIF",
+            "KBytes": "23001",
+            "Type": "Browse",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916RE_pyr.tif"
+          },
+          {
+            "Description": "BROWSE LABEL",
+            "FileName": "M1419447916RE_PYR.XML",
+            "KBytes": "2",
+            "Type": "Browse",
+            "URL": "https://pds.lroc.im-ldi.com/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0053A/EXTRAS/BROWSE/2022276/M1419447916RE_pyr.xml"
+          },
+          {
+            "Creation_date": "2023-04-11T02:15:01.508",
+            "Description": "PRODUCT KML FILE <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+            "FileName": "M1419447916RE_XML.KML",
+            "KBytes": "3",
+            "Type": "Derived",
+            "URL": "https://ode.rsl.wustl.edu/moon/datafile/kmlfiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916RE_xml.kml"
+          },
+          {
+            "Creation_date": "2023-04-11T02:15:01.446",
+            "Description": "PRODUCT FOOTPRINT SHAPEFILES (TAR.GZ) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+            "FileName": "M1419447916RE_XML.TAR.GZ",
+            "KBytes": "3",
+            "Type": "Derived",
+            "URL": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916RE_xml.tar.gz"
+          },
+          {
+            "Creation_date": "2023-04-11T02:15:01.375",
+            "Description": "PRODUCT FOOTPRINT SHAPEFILES (ZIP) <A HREF=\"PAGEHELP/CONTENT/FREQUENTLY_ASKED_QUESTIONS/PRODUCT_FOOTPRINTS.HTM\" TARGET=\"_BLANK\">HELP</A>",
+            "FileName": "M1419447916RE_XML.ZIP",
+            "KBytes": "17",
+            "Type": "Derived",
+            "URL": "https://ode.rsl.wustl.edu/moon/datafile/shapefiles/lro-l-lroc-2-edr/lrolrc_0053a/data/esm5/2022276/nac/M1419447916RE_xml.zip"
+          }
+        ]
+      },
+      "Product_lid": "urn:nasa:pds:lro-l-lroc-2-edr:lrolrc_0053a_data:nac.m1419447916re",
+      "Product_name": "M1419447916RE.IMG",
+      "Product_title": "Lunar Reconnaissance Orbiter Camera NAC EDR Product",
+      "Product_version_id": "2.0",
+      "ProductURL": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=nac.m1419447916re&product_idGeo=28855141",
+      "pt": "EDRNAC4",
+      "RelativePathtoVol": "data\\esm5\\2022276\\nac\\",
+      "Solar_distance": "149740459",
+      "Solar_longitude": "143.12",
+      "SpaceCraft_clock_start_count": "1/686501449:19507",
+      "SpaceCraft_clock_stop_count": "1/686501502:24392",
+      "Start_orbit_number": "59741",
+      "Stop_orbit_number": "59741",
+      "Target_name": "MOON",
+      "UTC_start_time": "2022-10-03T14:50:49.334000Z",
+      "UTC_stop_time": "2022-10-03T14:51:42.409000Z",
+      "Westernmost_longitude": "29.3"
+    },
+    "ingested_at": "2026-09-05T04:56:20.840898Z"
   }
 }

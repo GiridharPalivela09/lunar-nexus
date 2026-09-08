@@ -95,7 +95,7 @@ def main():
         print(f"\n[{idx}/{len(products)}] Product ID: {obs.product_id} | Resolution: {obs.spatial_resolution_m}m")
         print(f"  Bounds: Lat [{obs.bbox.min_lat:.2f}, {obs.bbox.max_lat:.2f}], Lon [{obs.bbox.min_lon:.2f}, {obs.bbox.max_lon:.2f}]")
         if obs.geometry.incidence_angle_deg is not None:
-            print(f"  Incidence: {obs.geometry.incidence_angle_deg:.1f}° | Phase: {obs.geometry.phase_angle_deg or 'N/A'}")
+            print(f"  Incidence: {obs.geometry.incidence_angle_deg:.1f} deg | Phase: {obs.geometry.phase_angle_deg or 'N/A'}")
         if obs.footprint_polygon:
             print(f"  Footprint: {len(obs.footprint_polygon)} polygon boundary vertices")
         

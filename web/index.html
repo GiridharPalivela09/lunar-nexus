@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS-LUNAR | AI Lunar Intelligence & Spatial Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Leaflet CSS for Lunar GIS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <!-- Three.js and OrbitControls for 3D Lunar Digital Twin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="nexus-theme">
+  <div class="app-layout">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="nav-brand">
+        <div class="brand-logo">
+          <div class="orbit-ring"></div>
+          <div class="lunar-core"></div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">NEXUS<span>-LUNAR</span></div>
+          <div class="brand-subtitle">Smart India Hackathon • Lunar Intelligence & Overlap Studio</div>
+        </div>
+      </div>
+
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-tab="tab-nexus3d" id="tabBtnNexus3D">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          3D Lunar Space Studio
+          <span class="badge-pulse" id="blenderMcpBadge" style="background: linear-gradient(135deg, #00f2fe, #4facfe);">BLENDER MCP</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-map" id="tabBtnMap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+          Lunar GIS Map
+        </button>
+        <button class="nav-tab" data-tab="tab-patches" id="tabBtnPatches">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          POC 2 Patch Studio
+          <span class="badge-pulse" id="pairCountBadge">0</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-poc4" id="tabBtnPOC4">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          POC 4 Robustness Studio
+          <span class="badge-pulse" id="poc4Badge">ROBUST</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-poc5" id="tabBtnPOC5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          POC 5 AI Studio
+          <span class="badge-pulse" id="poc5Badge">TWO-TOWER</span>
+        </button>
+        <button class="nav-tab" data-tab="tab-catalog" id="tabBtnCatalog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Catalog Index
+        </button>
+      </div>
+
+
+      <div class="nav-actions">
+        <div class="status-indicator">
+          <span class="pulse-dot"></span>
+          <span class="status-text" id="statusText">Catalog Online</span>
+        </div>
+        <button class="btn-refresh" id="btnRefreshCatalog" title="Reload Catalog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Workspace -->
+    <main class="main-content">
+      <!-- TAB 0: 3D Lunar Space Studio & Digital Twin -->
+      <section class="tab-pane active" id="tab-nexus3d">
+        <div class="nexus3d-workspace">
+          <!-- 3D WebGL Canvas Viewport -->
+          <div id="nexus3dCanvasContainer" class="nexus3d-canvas-container">
+            <!-- Three.js Canvas injected here -->
+          </div>
+
+          <!-- Top Floating Studio HUD -->
+          <div class="nexus3d-top-hud glassmorphism">
+            <div class="hud-brand">
+              <div class="hud-beacon"></div>
+              <div class="hud-titles">
+                <h3>SPHERICAL MOON LUNAR DIGITAL TWIN</h3>
+                <p>Ingestion Layer Data (OHRC • TMC-2 • LROC • IIRS) • South Pole Base (73.2°S, 26.0°E)</p>
+              </div>
+            </div>
+
+            <!-- View Mode Switcher: Globe vs Surface Base -->
+            <div class="view-mode-toggle-group">
+              <button class="btn-mode-toggle active" id="btnModeGlobe" title="View Full Spherical Moon with Ingested Sensor Footprints">
+                🌍 Lunar Globe
+              </button>
+              <button class="btn-mode-toggle" id="btnModeSurface" title="Zoom into South Pole Boguslawsky Habitat Site">
+                🔍 Surface Base Site
+              </button>
+            </div>
+
+            <!-- Blender MCP Connection Status Pill -->
+            <div class="blender-mcp-status-card" id="blenderStatusPill">
+              <span class="mcp-dot-pulse" id="mcpDotPulse"></span>
+              <span class="mcp-text" id="mcpStatusText">Blender MCP: Checking Port 9876...</span>
+            </div>
+
+            <div class="hud-top-actions">
+              <button class="btn-primary btn-mcp-action" id="btnBuildBlenderMcp" title="Transmit bpy code to BlenderMCPServer on port 9876">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                Build in Blender 3D (Port 9876)
+              </button>
+              <button class="btn-secondary btn-mcp-action" id="btnRenderBlenderHeadless" title="Render high-fidelity PBR digital twin with Blender EEVEE/Cycles">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                Render PBR Twin
+              </button>
+              <button class="btn-secondary btn-mcp-action" id="btnViewBlenderRender" title="View latest raytraced digital twin image">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                View Rendered Twin
+              </button>
+            </div>
+          </div>
+
+          <!-- Left Floating Construction Deck -->
+          <div class="nexus3d-left-panel glassmorphism">
+            <!-- Ingestion Layer Sensor Footprints -->
+            <div class="panel-section-title">
+              <span>🛰️ Ingestion Layer Sensor Overlays</span>
+            </div>
+            <div class="ingestion-chips-list" id="ingestionFootprintsList">
+              <div class="ingestion-chip active" id="chipFootprintOHRC" data-target="ohrc">
+                <span class="chip-led" style="background: #00f2fe; box-shadow: 0 0 8px #00f2fe;"></span>
+                <div class="chip-details">
+                  <strong>Chandrayaan-2 OHRC</strong>
+                  <span>0.25 m/px • Boguslawsky D18 (73.2°S)</span>
+                </div>
+                <button class="btn-flyto" title="Fly to Footprint">FLY ↗</button>
+              </div>
+              <div class="ingestion-chip active" id="chipFootprintTMC" data-target="tmc">
+                <span class="chip-led" style="background: #55efc4; box-shadow: 0 0 8px #55efc4;"></span>
+                <div class="chip-details">
+                  <strong>Chandrayaan-2 TMC-2</strong>
+                  <span>DEM Triplet • South Pole Topography</span>
+                </div>
+                <button class="btn-flyto" title="Fly to Footprint">FLY ↗</button>
+              </div>
+              <div class="ingestion-chip active" id="chipFootprintLROC" data-target="lroc">
+                <span class="chip-led" style="background: #ff7675; box-shadow: 0 0 8px #ff7675;"></span>
+                <div class="chip-details">
+                  <strong>NASA LRO NAC</strong>
+                  <span>0.5 m/px • Polar Reference Strip</span>
+                </div>
+                <button class="btn-flyto" title="Fly to Footprint">FLY ↗</button>
+              </div>
+              <div class="ingestion-chip active" id="chipFootprintIIRS" data-target="iirs">
+                <span class="chip-led" style="background: #a29bfe; box-shadow: 0 0 8px #a29bfe;"></span>
+                <div class="chip-details">
+                  <strong>Chandrayaan-2 IIRS</strong>
+                  <span>2.85µm Hydroxyl Ice Anomaly</span>
+                </div>
+                <button class="btn-flyto" title="Fly to Footprint">FLY ↗</button>
+              </div>
+            </div>
+
+            <div class="panel-section-title" style="margin-top: 6px;">
+              <span>🏗️ Infrastructure Construction Deck</span>
+            </div>
+
+            <div class="build-primary-actions">
+              <button class="btn-build-all" id="btnBuildAllAnimated">
+                <span class="btn-icon">⚡</span>
+                <span class="btn-lbl">Build Base Infrastructure (Animated)</span>
+              </button>
+            </div>
+
+            <div class="module-selector-group">
+              <label class="group-label">Lunar Infrastructure Modules</label>
+              <div class="module-toggles-list" id="moduleTogglesContainer">
+                <div class="module-toggle-item active" data-mod="hab_core_01" id="modToggleHabCore">
+                  <span class="mod-dot" style="background: #00f2fe;"></span>
+                  <div class="mod-info">
+                    <strong>Living Core Dome</strong>
+                    <span>hab_core_01 • 4-Crew Inflatable</span>
+                  </div>
+                  <span class="mod-status-badge">PLANNED</span>
+                </div>
+                <div class="module-toggle-item active" data-mod="hab_solar_01" id="modToggleSolar">
+                  <span class="mod-dot" style="background: #ffd32a;"></span>
+                  <div class="mod-info">
+                    <strong>Bifacial Solar PV Farm</strong>
+                    <span>hab_solar_01 • 150 kW Rated</span>
+                  </div>
+                  <span class="mod-status-badge">PLANNED</span>
+                </div>
+                <div class="module-toggle-item active" data-mod="hab_pad_01" id="modTogglePad">
+                  <span class="mod-dot" style="background: #ff4757;"></span>
+                  <div class="mod-info">
+                    <strong>Touchdown Landing Pad</strong>
+                    <span>hab_pad_01 • Sintered Regolith</span>
+                  </div>
+                  <span class="mod-status-badge">PLANNED</span>
+                </div>
+                <div class="module-toggle-item active" data-mod="hab_berm_01" id="modToggleBerm">
+                  <span class="mod-dot" style="background: #a4b0be;"></span>
+                  <div class="mod-info">
+                    <strong>Regolith Blast Berm</strong>
+                    <span>hab_berm_01 • 8m Wall Deflector</span>
+                  </div>
+                  <span class="mod-status-badge">PLANNED</span>
+                </div>
+                <div class="module-toggle-item active" data-mod="hab_isru_01" id="modToggleIsru">
+                  <span class="mod-dot" style="background: #2ed573;"></span>
+                  <div class="mod-info">
+                    <strong>Volatiles ISRU Plant</strong>
+                    <span>hab_isru_01 • Hydroxyl Cold Trap</span>
+                  </div>
+                  <span class="mod-status-badge">PLANNED</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lighting & Sun Angle Controls -->
+            <div class="environment-controls-group">
+              <label class="group-label">Polar Sun Grazing Lighting</label>
+              <div class="slider-row">
+                <span class="slider-name">Elevation:</span>
+                <input type="range" min="0.5" max="20" step="0.5" value="3.5" class="range-slider" id="sliderSunElevation">
+                <span class="slider-value" id="valSunElevation">3.5°</span>
+              </div>
+              <div class="slider-row">
+                <span class="slider-name">Azimuth:</span>
+                <input type="range" min="0" max="360" step="5" value="125" class="range-slider" id="sliderSunAzimuth">
+                <span class="slider-value" id="valSunAzimuth">125°</span>
+              </div>
+            </div>
+
+            <!-- Camera View Presets -->
+            <div class="camera-presets-group">
+              <label class="group-label">Orbital Camera Viewpoints</label>
+              <div class="cam-buttons-grid">
+                <button class="btn-cam-preset active" data-cam="free">Orbit</button>
+                <button class="btn-cam-preset" data-cam="core">Hab Dome</button>
+                <button class="btn-cam-preset" data-cam="solar">Solar Field</button>
+                <button class="btn-cam-preset" data-cam="pad">Landing Pad</button>
+                <button class="btn-cam-preset" data-cam="top">Overhead GIS</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Floating Telemetry & Inspection HUD -->
+          <div class="nexus3d-right-panel glassmorphism" id="nexus3dInspector">
+            <div class="panel-section-title">
+              <span>🛰️ Module Telemetry & Constraints</span>
+            </div>
+
+            <div class="inspector-card-body" id="inspectorContent">
+              <div class="module-header-badge">
+                <div class="selected-mod-name" id="inspModName">Primary Living Core Dome</div>
+                <div class="selected-mod-id val-code" id="inspModId">hab_core_01</div>
+              </div>
+
+              <div class="telemetry-metrics-grid">
+                <div class="tel-metric">
+                  <span class="tel-lbl">Coordinates (X, Y)</span>
+                  <strong class="tel-val" id="inspCoords">370m, 335m</strong>
+                </div>
+                <div class="tel-metric">
+                  <span class="tel-lbl">Terrain Slope</span>
+                  <strong class="tel-val highlight-green" id="inspSlope">4.48° (Compliant)</strong>
+                </div>
+                <div class="tel-metric">
+                  <span class="tel-lbl">Solar Illumination</span>
+                  <strong class="tel-val highlight-cyan" id="inspSolar">88.5% Diurnal Peak</strong>
+                </div>
+                <div class="tel-metric">
+                  <span class="tel-lbl">ISRU Volatiles Dist</span>
+                  <strong class="tel-val highlight-purple" id="inspIsruDist">427.5 m (Safe Proximity)</strong>
+                </div>
+                <div class="tel-metric">
+                  <span class="tel-lbl">Blast Safety Distance</span>
+                  <strong class="tel-val highlight-green" id="inspBlastDist">1,154.3 m (Req: &gt;1000m)</strong>
+                </div>
+                <div class="tel-metric">
+                  <span class="tel-lbl">GNN Suitability</span>
+                  <strong class="tel-val highlight-cyan" id="inspGnnScore">0.892 (Optimal Base Site)</strong>
+                </div>
+              </div>
+
+              <div class="constraints-checklist-group">
+                <label class="group-label">SIH Engineering Constraints</label>
+                <div class="constraint-item-check pass">
+                  <span class="check-icon">✓</span>
+                  <span>Foundation Slope &le; 5.0° (Measured 4.48°)</span>
+                </div>
+                <div class="constraint-item-check pass">
+                  <span class="check-icon">✓</span>
+                  <span>Ejecta Blast Buffer &ge; 1000.0m (Measured 1,154.3m)</span>
+                </div>
+                <div class="constraint-item-check pass">
+                  <span class="check-icon">✓</span>
+                  <span>Solar Umbilical &le; 1200.0m (Measured 353.6m)</span>
+                </div>
+              </div>
+
+              <div class="pipeline-flow-info">
+                <span class="flow-tag">REAL DATA PIPELINE</span>
+                <p>TMC-2 High-Res Elevation • IIRS Hydroxyl Anomaly • GNN-SNN Temporal Reasoner • Blender MCP Twin</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Toast Notification -->
+          <div class="nexus3d-toast glassmorphism" id="nexus3dToast" style="display: none;">
+            <span id="toastIcon">🚀</span>
+            <span id="toastMsg">Base infrastructure building in progress...</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 1: Lunar GIS Map View -->
+      <section class="tab-pane" id="tab-map">
+        <div class="map-workspace">
+          <div id="lunarMap" class="lunar-map-container"></div>
+
+          <!-- Map Overlay Floating Control Panel -->
+          <div class="map-floating-panel glassmorphism">
+            <div class="panel-header">
+              <h3>Lunar Footprint Filters</h3>
+              <span class="tag-pill" id="visibleFootprintsCount">0 visible</span>
+            </div>
+            
+            <div class="filter-group">
+              <label class="filter-label">Target Sensors</label>
+              <div class="sensor-chips">
+                <label class="chip chip-ohrc">
+                  <input type="checkbox" checked value="OHRC" class="sensor-filter">
+                  <span class="chip-color"></span> Chandrayaan-2 OHRC
+                </label>
+                <label class="chip chip-lro">
+                  <input type="checkbox" checked value="LRO_NAC" class="sensor-filter">
+                  <span class="chip-color"></span> NASA LRO NAC
+                </label>
+                <label class="chip chip-tmc">
+                  <input type="checkbox" checked value="TMC2" class="sensor-filter">
+                  <span class="chip-color"></span> Chandrayaan-2 TMC-2
+                </label>
+              </div>
+            </div>
+
+            <div class="quick-jump-group">
+              <label class="filter-label">Quick Jump to Region</label>
+              <div class="jump-buttons">
+                <button class="btn-jump" data-lat="-73.25" data-lon="26.0" data-zoom="7">
+                  Boguslawsky (South Pole)
+                </button>
+                <button class="btn-jump" data-lat="-85.0" data-lon="0.0" data-zoom="6">
+                  Deep Lunar South Pole
+                </button>
+                <button class="btn-jump" data-lat="0.0" data-lon="0.0" data-zoom="3">
+                  Global Equator
+                </button>
+              </div>
+            </div>
+
+            <div class="layer-info-card" id="selectedObservationCard">
+              <div class="card-empty-state">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <span>Click any footprint polygon to inspect geometry and find overlaps.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: POC 2 Patch Studio -->
+      <section class="tab-pane" id="tab-patches">
+        <div class="patches-studio-layout">
+          <!-- Left Sidebar: Overlapping Pairs Browser -->
+          <aside class="studio-sidebar glassmorphism">
+            <div class="sidebar-header">
+              <h3>Overlapping Observation Pairs</h3>
+              <p class="subtitle">Discovered candidate co-registration footprints</p>
+            </div>
+
+            <div class="pairs-list" id="pairsContainer">
+              <!-- Dynamically populated -->
+              <div class="loading-spinner-box">
+                <div class="spinner"></div>
+                <span>Scanning catalog for overlapping pairs...</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Center: Patch Studio & Split Comparison Canvas -->
+          <section class="studio-workspace">
+            <div class="studio-topbar glassmorphism" id="activePairBanner">
+              <div class="pair-headline">
+                <div class="headline-title" id="bannerPairTitle">Select a pair from the left panel</div>
+                <div class="headline-meta" id="bannerPairMeta">POC 2 Resolution-Aware Patch Engine</div>
+              </div>
+              <div class="pair-actions">
+                <button class="btn-secondary" id="btnViewPairOnMap" disabled style="display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; font-size: 0.85rem; color: #fff; background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle); border-radius: 8px; cursor: pointer;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon></svg>
+                  View on GIS Map
+                </button>
+                <button class="btn-primary" id="btnOpenExtractModal" disabled>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                  Configure & Extract Patches
+                </button>
+              </div>
+            </div>
+
+            <!-- Split-Screen Interactive Comparison Tool -->
+            <div class="split-viewer-card glassmorphism" id="splitViewerContainer">
+              <div class="viewer-header">
+                <div class="viewer-title">
+                  <span class="indicator-icon"></span>
+                  <strong>Live Co-Registration Visualizer</strong>
+                  <span class="active-patch-label" id="currentPatchLabel">Patch #0001</span>
+                </div>
+                <div class="viewer-controls">
+                  <span class="slider-label">Source vs Reference Swipe:</span>
+                  <input type="range" min="0" max="100" value="50" class="compare-slider" id="compareSlider">
+                  <button class="btn-toggle" id="btnToggleMode">Toggle Blink</button>
+                </div>
+              </div>
+
+              <div class="comparison-stage" id="comparisonStage">
+                <div class="stage-layer layer-ref" id="layerRef">
+                  <img id="imgRefView" src="" alt="Reference Image">
+                  <div class="stage-tag tag-ref" id="lblRefTag">Reference (LRO NAC)</div>
+                </div>
+                <div class="stage-layer layer-src" id="layerSrc">
+                  <img id="imgSrcView" src="" alt="Source Image">
+                  <div class="stage-tag tag-src" id="lblSrcTag">Source (OHRC)</div>
+                </div>
+                <div class="divider-line" id="dividerLine">
+                  <div class="divider-handle"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Extracted Patches Grid -->
+            <div class="extracted-patches-container">
+              <div class="section-title-row">
+                <h4>Extracted Resolution-Harmonized Patches</h4>
+                <div class="stats-pills" id="patchStatsPills"></div>
+              </div>
+              <div class="patches-grid-view" id="patchesGridView">
+                <!-- Dynamically rendered -->
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- TAB 3: Catalog Index Table -->
+      <section class="tab-pane" id="tab-catalog">
+        <div class="catalog-workspace glassmorphism">
+          <div class="catalog-header-row">
+            <div>
+              <h2>Indexed Lunar Observations</h2>
+              <p class="subtitle">Complete metadata catalog indexed in data/catalog.json</p>
+            </div>
+            <div class="search-box">
+              <input type="text" id="catalogSearchInput" placeholder="Search by product ID, sensor, or mission...">
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="catalog-table">
+              <thead>
+                <tr>
+                  <th>Preview</th>
+                  <th>Product ID</th>
+                  <th>Mission</th>
+                  <th>Sensor</th>
+                  <th>Resolution</th>
+                  <th>Latitude Span</th>
+                  <th>Longitude Span</th>
+                  <th>Solar Incidence</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="catalogTableBody">
+                <!-- Dynamically generated rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      
+      <!-- TAB 4: POC 4 Illumination & Scale Robustness Studio -->
+      <section class="tab-pane" id="tab-poc4">
+        <div class="poc4-workspace">
+          <!-- Top Control Header Banner -->
+          <div class="poc4-top-banner glassmorphism">
+            <div class="banner-left">
+              <div class="banner-title-row">
+                <span class="pulse-dot active"></span>
+                <h2>POC-4: Illumination & Scale Robustness Studio</h2>
+                <span class="provenance-pill" id="poc4ProvenanceLabel">REAL-GEOGRAPHY / SYNTHETIC-ILLUMINATION EXPERIMENT</span>
+              </div>
+              <p class="banner-desc">
+                Investigating spatial registration stability under severe solar incidence disparities, deep polar shadows, and cross-sensor GSD variations (0.25 m/px OHRC vs 1.0 m/px LROC).
+              </p>
+            </div>
+            <div class="banner-actions">
+              <button class="btn-secondary btn-reroll-poc4" id="btnRerollPOC4" title="Execute run with a new random seed to generate variation in terrain and illumination">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                RE-ROLL SEED & RUN
+              </button>
+              <button class="btn-primary btn-run-poc4" id="btnRunPOC4Experiment">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                RUN EXPERIMENT (SEED 42)
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Condition Filter & Live Run Inspector Bar -->
+          <div class="poc4-filter-bar glassmorphism">
+            <div class="filter-bar-left">
+              <div class="filter-item">
+                <label for="poc4ConditionSelect">Illumination Filter:</label>
+                <select id="poc4ConditionSelect" class="nexus-select">
+                  <option value="ALL">All 8 Illumination Modes (Aggregated)</option>
+                  <option value="NORMAL">Normal Solar Elevation</option>
+                  <option value="DARKENED">Darkened (Low Albedo / Steep Angle)</option>
+                  <option value="BRIGHTENED">Brightened (High Altitude Glare)</option>
+                  <option value="LOW_CONTRAST">Low Contrast (Hazy / Low Dynamic Range)</option>
+                  <option value="HIGH_CONTRAST">High Contrast (Extreme Dynamic Range)</option>
+                  <option value="GAMMA_SHIFT">Gamma Sensor Non-Linearity</option>
+                  <option value="ILLUMINATION_GRADIENT">Illumination Gradient Ramp</option>
+                  <option value="SHADOW_PERTURBATION">Shadow Perturbation (Deep Polar Craters)</option>
+                </select>
+              </div>
+              <div class="filter-item">
+                <label for="poc4ScaleSelect">Scale Disparity:</label>
+                <select id="poc4ScaleSelect" class="nexus-select">
+                  <option value="ALL">All GSD Scales (1.0x, 0.5x, 0.25x)</option>
+                  <option value="1.0">1.0x (Scale Harmonized)</option>
+                  <option value="0.5">0.5x Scale Factor</option>
+                  <option value="0.25">0.25x Scale Factor (4.00x Disparity)</option>
+                </select>
+              </div>
+            </div>
+            <div class="filter-bar-right">
+              <div class="run-status-indicator" id="poc4RunStatusIndicator">
+                <span class="status-dot"></span>
+                <span id="poc4RunStatusText">Loaded cached results</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-Time Stepped Execution Tracker -->
+          <div class="execution-progress-card glassmorphism" id="poc4ProgressCard" style="display: none;">
+            <div class="progress-header">
+              <span class="progress-title">Experiment Pipeline Execution in Progress...</span>
+              <span class="progress-step-label" id="poc4CurrentStep">Step 1 of 9</span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="poc4ProgressBar" style="width: 15%;"></div>
+            </div>
+            <div class="steps-flow" id="poc4StepsFlow">
+              <span class="step-badge active">1. Patches</span>
+              <span class="step-badge">2. Illumination</span>
+              <span class="step-badge">3. Shadows</span>
+              <span class="step-badge">4. Pyramids</span>
+              <span class="step-badge">5. Features</span>
+              <span class="step-badge">6. Matching</span>
+              <span class="step-badge">7. RANSAC</span>
+              <span class="step-badge">8. Metrics</span>
+              <span class="step-badge">9. Figures</span>
+            </div>
+          </div>
+
+          <!-- Row 1: Observation Pairs & Scale Characteristics -->
+          <div class="poc4-grid-row">
+            <div class="poc4-card glassmorphism">
+              <div class="card-header">
+                <h3>Source Observation</h3>
+                <span class="tag-pill tag-ohrc">Chandrayaan-2 OHRC</span>
+              </div>
+              <div class="card-body">
+                <div class="info-row"><span class="lbl">Product ID:</span> <strong id="poc4SrcId" class="val-code">ch2_ohr_ncp_20260103t1005176450_d_img_d18</strong></div>
+                <div class="info-row"><span class="lbl">Spatial GSD:</span> <strong>0.25 m/pixel</strong></div>
+                <div class="info-row"><span class="lbl">CRS:</span> <span>Lunar South Pole Stereo</span></div>
+                <div class="info-row"><span class="lbl">Native Dimensions:</span> <span>512 x 512 px</span></div>
+              </div>
+            </div>
+
+            <div class="poc4-card glassmorphism">
+              <div class="card-header">
+                <h3>Reference Observation</h3>
+                <span class="tag-pill tag-lro">NASA LROC NAC</span>
+              </div>
+              <div class="card-body">
+                <div class="info-row"><span class="lbl">Product ID:</span> <strong id="poc4RefId" class="val-code">SYNTHETIC_LROC_CANDIDATE_P850S0250</strong></div>
+                <div class="info-row"><span class="lbl">Spatial GSD:</span> <strong>1.00 m/pixel</strong></div>
+                <div class="info-row"><span class="lbl">CRS:</span> <span>Lunar South Pole Stereo</span></div>
+                <div class="info-row"><span class="lbl">Native Dimensions:</span> <span>128 x 128 px</span></div>
+              </div>
+            </div>
+
+            <div class="poc4-card glassmorphism">
+              <div class="card-header">
+                <h3>Scale Relationship</h3>
+                <span class="tag-pill">Resolution Disparity</span>
+              </div>
+              <div class="card-body">
+                <div class="metric-display">
+                  <div class="metric-val" id="poc4GsdRatio">4.00x</div>
+                  <div class="metric-lbl">Ground Sampling Distance (GSD) Ratio</div>
+                </div>
+                <p class="footnote">
+                  <strong>Scientific Rule:</strong> GSD ratio characterizes sensor sampling disparity. It is not an indicator of matching success.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Live Quantitative Metrics Scorecard -->
+          <div class="metrics-scorecard-row">
+            <div class="score-card glassmorphism">
+              <div class="score-lbl">Best Representation</div>
+              <div class="score-val highlight-cyan" id="poc4BestRep">MULTI-SCALE + ILLUMINATION-AWARE</div>
+              <div class="score-sub">Dynamically calculated</div>
+            </div>
+            <div class="score-card glassmorphism">
+              <div class="score-lbl">Alignment Success</div>
+              <div class="score-val highlight-green" id="poc4SuccessRate">70.0%</div>
+              <div class="score-sub">vs 10.0% for RAW baseline</div>
+            </div>
+            <div class="score-card glassmorphism">
+              <div class="score-lbl">Geometric Inlier Ratio</div>
+              <div class="score-val highlight-purple" id="poc4InlierRatio">65.8%</div>
+              <div class="score-sub">Across 8 illumination modes</div>
+            </div>
+            <div class="score-card glassmorphism">
+              <div class="score-lbl">Recall@1 Accuracy</div>
+              <div class="score-val highlight-amber" id="poc4Recall1">80.0%</div>
+              <div class="score-sub">Top candidate ground truth</div>
+            </div>
+            <div class="score-card glassmorphism">
+              <div class="score-lbl">Registration RMSE</div>
+              <div class="score-val highlight-cyan" id="poc4Rmse">1.03 px</div>
+              <div class="score-sub">Geometric reprojection error</div>
+            </div>
+          </div>
+
+          <!-- Row 3: Visual Representations Gallery -->
+          <div class="poc4-section-card glassmorphism">
+            <div class="section-header-row">
+              <div>
+                <h3>Illumination Representations & Shadow Decomposition</h3>
+                <p class="subtitle">Extracting illumination-invariant terrain structure from raw radiance</p>
+              </div>
+            </div>
+            <div class="rep-gallery-grid">
+              <div class="gallery-item">
+                <div class="gallery-title">A. RAW Intensity</div>
+                <div class="gallery-img-box"><img src="/outputs/poc4/illumination_comparison.png" alt="Raw" class="img-preview-trigger" data-title="Figure 1: Illumination Comparison"></div>
+                <div class="gallery-sub">Native sensor DN values</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-title">B. Scale Pyramid (0.25 - 2.0m)</div>
+                <div class="gallery-img-box"><img src="/outputs/poc4/scale_pyramid.png" alt="Pyramid" class="img-preview-trigger" data-title="Figure 2: Multi-Scale Image Pyramid"></div>
+                <div class="gallery-sub">1.0x, 0.5x, 0.25x, 0.125x GSD levels</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-title">C. Registration Vectors</div>
+                <div class="gallery-img-box"><img src="/outputs/poc4/registration_comparison.png" alt="Registration" class="img-preview-trigger" data-title="Figure 3: Registration Comparison"></div>
+                <div class="gallery-sub">Verified inlier correspondences</div>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-title">D. Metrics Matrix Heatmap</div>
+                <div class="gallery-img-box"><img src="/outputs/poc4/illumination_scale_heatmap.png" alt="Heatmap" class="img-preview-trigger" data-title="Figure 5: Illumination & Scale Heatmap"></div>
+                <div class="gallery-sub">Perturbation response matrix</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 4: Baseline Comparison & Ablation Tables -->
+          <div class="poc4-tables-row">
+            <div class="poc4-table-card glassmorphism">
+              <div class="table-card-header">
+                <h3>Baseline vs Robust Representation Matrix</h3>
+                <span class="tag-pill tag-green">Unbiased Evaluation</span>
+              </div>
+              <div class="table-container">
+                <table class="poc4-table" id="poc4ComparisonTable">
+                  <thead>
+                    <tr>
+                      <th>Representation</th>
+                      <th>Success Rate</th>
+                      <th>Inlier Ratio</th>
+                      <th>Recall@1</th>
+                      <th>RMSE</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="poc4ComparisonTableBody">
+                    <tr><td>RAW</td><td>10.0%</td><td>10.0%</td><td>0.0%</td><td>0.61 px</td><td><span class="pill-fail">Baseline</span></td></tr>
+                    <tr><td>NORMALIZED</td><td>10.0%</td><td>10.0%</td><td>0.0%</td><td>0.61 px</td><td><span class="pill-fail">Low Recall</span></td></tr>
+                    <tr><td>GRADIENT</td><td>20.0%</td><td>14.3%</td><td>10.0%</td><td>0.72 px</td><td><span class="pill-neutral">Partial</span></td></tr>
+                    <tr><td>MULTI-SCALE</td><td>60.0%</td><td>55.0%</td><td>60.0%</td><td>0.95 px</td><td><span class="pill-pass">High Scale</span></td></tr>
+                    <tr class="highlight-row"><td><strong>MULTI-SCALE + ILLUM-AWARE</strong></td><td><strong>70.0%</strong></td><td><strong>65.8%</strong></td><td><strong>80.0%</strong></td><td><strong>1.03 px</strong></td><td><span class="pill-winner">★ BEST PERFORMER</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="poc4-table-card glassmorphism">
+              <div class="table-card-header">
+                <h3>8-Configuration Ablation Study</h3>
+                <span class="tag-pill">Incremental Contribution</span>
+              </div>
+              <div class="table-container">
+                <table class="poc4-table" id="poc4AblationTable">
+                  <thead>
+                    <tr>
+                      <th>Configuration</th>
+                      <th>Scale Harmonized</th>
+                      <th>Inlier Ratio</th>
+                      <th>RMSE</th>
+                      <th>Result</th>
+                    </tr>
+                  </thead>
+                  <tbody id="poc4AblationTableBody">
+                    <tr><td>1. RAW</td><td>No</td><td>0.0%</td><td>999.00 px</td><td><span class="pill-fail">FAIL</span></td></tr>
+                    <tr><td>2. RAW + SCALE</td><td>Yes</td><td>100.0%</td><td>0.62 px</td><td><span class="pill-pass">PASS</span></td></tr>
+                    <tr><td>3. NORMALIZED</td><td>No</td><td>0.0%</td><td>999.00 px</td><td><span class="pill-fail">FAIL</span></td></tr>
+                    <tr><td>4. NORMALIZED + SCALE</td><td>Yes</td><td>100.0%</td><td>0.28 px</td><td><span class="pill-pass">PASS</span></td></tr>
+                    <tr><td>5. GRADIENT</td><td>No</td><td>0.0%</td><td>999.00 px</td><td><span class="pill-fail">FAIL</span></td></tr>
+                    <tr><td>6. GRADIENT + SCALE</td><td>Yes</td><td>85.7%</td><td>0.64 px</td><td><span class="pill-pass">PASS</span></td></tr>
+                    <tr><td>7. ILLUMINATION-AWARE</td><td>No</td><td>0.0%</td><td>999.00 px</td><td><span class="pill-fail">FAIL</span></td></tr>
+                    <tr class="highlight-row"><td><strong>8. ILLUMINATION-AWARE + SCALE</strong></td><td><strong>Yes</strong></td><td><strong>100.0%</strong></td><td><strong>1.16 px</strong></td><td><span class="pill-winner">PASS</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- TAB 5: POC 5 Multimodal AI Correspondence Studio -->
+      <section class="tab-pane" id="tab-poc5">
+        <div class="poc4-workspace">
+          <!-- Top Control Header Banner -->
+          <div class="poc4-top-banner glassmorphism">
+            <div class="banner-left">
+              <div class="banner-title-row">
+                <span class="pulse-dot active"></span>
+                <h2>POC-5: Multimodal AI Correspondence Studio</h2>
+                <span class="provenance-pill" id="poc5ProvenanceLabel">AUTHENTIC LUNAR OBSERVATION / TWO-TOWER PYTORCH MODEL</span>
+              </div>
+              <p class="banner-desc">
+                Cross-sensor lunar terrain correspondence mapping Chandrayaan-2 OHRC ($0.25\text{ m/px}$) & TMC-2 ($5.0\text{ m/px}$) to NASA LROC NAC ($1.0\text{ m/px}$) using 128-D contrastive metric learning with physical metadata conditioning.
+              </p>
+            </div>
+            <div class="banner-actions">
+              <button class="btn-primary-gradient" id="btnRunPOC5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                Run POC-5 Retrieval Pipeline
+              </button>
+            </div>
+          </div>
+
+          <!-- Key Performance Indicator Metric Cards -->
+          <div class="metrics-grid">
+            <div class="metric-card glassmorphism">
+              <span class="metric-label">Recall@1 Accuracy</span>
+              <span class="metric-value" id="poc5Recall1Val">20.0%</span>
+              <span class="metric-subtext">Top-1 Geographic Match</span>
+            </div>
+            <div class="metric-card glassmorphism">
+              <span class="metric-label">Recall@5 Accuracy</span>
+              <span class="metric-value highlight-val" id="poc5Recall5Val">60.0%</span>
+              <span class="metric-subtext">Top-5 Candidate Pool</span>
+            </div>
+            <div class="metric-card glassmorphism">
+              <span class="metric-label">Recall@10 Accuracy</span>
+              <span class="metric-value highlight-val" id="poc5Recall10Val">100.0%</span>
+              <span class="metric-subtext">Comprehensive Candidate Coverage</span>
+            </div>
+            <div class="metric-card glassmorphism">
+              <span class="metric-label">Mean Reciprocal Rank</span>
+              <span class="metric-value" id="poc5MRRVal">0.382</span>
+              <span class="metric-subtext">Target: &ge; 0.350</span>
+            </div>
+            <div class="metric-card glassmorphism">
+              <span class="metric-label">Model Embedding Dim</span>
+              <span class="metric-value" id="poc5DimVal">128-D</span>
+              <span class="metric-subtext">L2 Normalized Latent Sphere</span>
+            </div>
+          </div>
+
+          <!-- Query Selection & Top-5 Candidate Ranking Grid -->
+          <div class="poc4-section glassmorphism" style="margin-top: 1.5rem;">
+            <div class="section-header-flex">
+              <div>
+                <h3>Cross-Sensor 1-to-N Candidate Retrieval Explorer</h3>
+                <p class="subtitle">Select a Chandrayaan-2 query footprint to inspect its Top-5 retrieved LROC NAC candidates and ground-truth validation</p>
+              </div>
+              <div class="poc4-filter-controls">
+                <label for="poc5QuerySelect" class="filter-label">Query Patch:</label>
+                <select id="poc5QuerySelect" class="nexus-select">
+                  <!-- Dynamically populated -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Visual Ranking Grid Row -->
+            <div id="poc5RetrievalGrid" class="poc5-retrieval-container" style="margin-top: 1rem; display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem;">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Diagnostic Publication Figures Carousel / Grid -->
+          <div class="poc4-figures-grid" style="margin-top: 1.5rem;">
+            <div class="figure-card glassmorphism">
+              <div class="figure-card-header">
+                <h4>1. Two-Tower Neural Metric Architecture</h4>
+                <span class="figure-badge">SCHEMATIC</span>
+              </div>
+              <div class="figure-img-wrapper" id="poc5WrapperArch">
+                <img id="poc5FigArch" src="/outputs/poc5/two_tower_architecture.png" alt="Two Tower Architecture" class="clickable-figure" title="Click to enlarge">
+              </div>
+            </div>
+            <div class="figure-card glassmorphism">
+              <div class="figure-card-header">
+                <h4>2. Cross-Sensor Retrieval Ranking Grid</h4>
+                <span class="figure-badge">TOP-K VALIDATION</span>
+              </div>
+              <div class="figure-img-wrapper" id="poc5WrapperGrid">
+                <img id="poc5FigGrid" src="/outputs/poc5/retrieval_ranking_grid.png" alt="Retrieval Grid" class="clickable-figure" title="Click to enlarge">
+              </div>
+            </div>
+            <div class="figure-card glassmorphism">
+              <div class="figure-card-header">
+                <h4>3. Latent Space Embedding Clusters (PCA)</h4>
+                <span class="figure-badge">128-D PROJECTION</span>
+              </div>
+              <div class="figure-img-wrapper" id="poc5WrapperClusters">
+                <img id="poc5FigClusters" src="/outputs/poc5/embedding_clusters.png" alt="Embedding Clusters" class="clickable-figure" title="Click to enlarge">
+              </div>
+            </div>
+            <div class="figure-card glassmorphism">
+              <div class="figure-card-header">
+                <h4>4. Recall@K Benchmark Curve</h4>
+                <span class="figure-badge">AI VS CLASSICAL</span>
+              </div>
+              <div class="figure-img-wrapper" id="poc5WrapperRecall">
+                <img id="poc5FigRecall" src="/outputs/poc5/recall_at_k_curve.png" alt="Recall at K Curve" class="clickable-figure" title="Click to enlarge">
+              </div>
+            </div>
+            <div class="figure-card glassmorphism">
+              <div class="figure-card-header">
+                <h4>5. Cosine Similarity Distribution</h4>
+                <span class="figure-badge">LATENT SEPARATION</span>
+              </div>
+              <div class="figure-img-wrapper" id="poc5WrapperDist">
+                <img id="poc5FigDist" src="/outputs/poc5/similarity_distribution.png" alt="Similarity Distribution" class="clickable-figure" title="Click to enlarge">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Image Enlargement Lightbox Modal -->
+  <div class="modal-backdrop" id="imagePreviewModal" style="display: none;">
+    <div class="modal-dialog modal-lg glassmorphism">
+      <div class="modal-header">
+        <h3 id="previewModalTitle">Figure Preview</h3>
+        <button class="btn-close" id="btnClosePreviewModal">&times;</button>
+      </div>
+      <div class="modal-body preview-modal-body">
+        <img id="previewModalImg" src="" alt="Full Preview">
+      </div>
+    </div>
+  </div>
+
+  <!-- Extraction Modal Dialog -->
+  <div class="modal-backdrop" id="extractModal">
+
+    <div class="modal-dialog glassmorphism">
+      <div class="modal-header">
+        <h3>POC 2: Patch Extraction Parameters</h3>
+        <button class="btn-close" id="btnCloseExtractModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <label>Source Observation</label>
+          <input type="text" id="modalSourceId" readonly class="input-readonly">
+        </div>
+        <div class="form-row">
+          <label>Reference Observation</label>
+          <input type="text" id="modalRefId" readonly class="input-readonly">
+        </div>
+        <div class="form-grid">
+          <div class="form-row">
+            <label>Patch Size (pixels)</label>
+            <select id="modalPatchSize">
+              <option value="256">256 x 256 px</option>
+              <option value="512" selected>512 x 512 px (Recommended)</option>
+              <option value="1024">1024 x 1024 px</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Sliding Stride</label>
+            <select id="modalStride">
+              <option value="128">128 px (50% Overlap)</option>
+              <option value="256">256 px (50% Overlap for 512)</option>
+              <option value="512" selected>512 px (No Tile Overlap)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Resolution Harmonization Strategy</label>
+          <select id="modalStrategy">
+            <option value="match_coarser" selected>Match Coarser (Downsample Higher-Res to Target GSD)</option>
+            <option value="match_finer">Match Finer (Upsample Lower-Res to Higher GSD)</option>
+            <option value="native_physical">Native Physical Scale (Preserve Pixels, Scale Bounds)</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="btnCancelModal">Cancel</button>
+        <button class="btn-primary" id="btnRunExtraction">Run Patch Extraction Engine</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blender Render Preview Lightbox Modal -->
+  <div class="modal-backdrop" id="blenderRenderModal" style="display: none;">
+    <div class="modal-dialog modal-xl glassmorphism" style="max-width: 1100px; width: 92vw;">
+      <div class="modal-header">
+        <div>
+          <h3>Blender 3D Photorealistic Digital Twin (PBR Cycles/EEVEE)</h3>
+          <p class="subtitle" style="margin: 0; font-size: 0.82rem; color: var(--text-secondary);">
+            Physically-Based Render of Boguslawsky Crater • Sintered Regolith Base • Low Polar Sun (3.5° Elevation)
+          </p>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <a id="btnDownloadRender" href="/outputs/nexus_3d/nexus_blender_digital_twin.png" download="nexus_blender_digital_twin.png" class="btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download HD PNG
+          </a>
+          <button class="btn-close" id="btnCloseBlenderModal">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body preview-modal-body" style="padding: 12px; text-align: center; background: #000; border-radius: 8px;">
+        <img id="blenderModalImg" src="/outputs/nexus_3d/nexus_blender_digital_twin.png" alt="Blender PBR Digital Twin" style="max-width: 100%; max-height: 72vh; object-fit: contain; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.8);">
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+        <div style="font-size: 0.8rem; color: var(--text-secondary); display: flex; gap: 16px;">
+          <span>Engine: <strong>Blender EEVEE / Cycles PBR</strong></span>
+          <span>Resolution: <strong>1920 x 1080 Full HD</strong></span>
+          <span>Pipeline: <strong>Blender MCP Socket (9876) / CLI Auto-Bridge</strong></span>
+        </div>
+        <button class="btn-secondary" id="btnDismissBlenderModal">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="poc4Toast" class="nexus-toast"></div>
+
+  <!-- Leaflet JS for GIS map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/app.js"></script>
+</body>
+</html>

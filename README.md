@@ -11,17 +11,29 @@ This module provides an automated acquisition, parsing, and spatial catalog inde
 
 Install required dependencies:
 ```bash
+
 python3 -m pip install -r requirements.txt
 ```
 
 ---
 
-## 2. Quick Start: Benchmark Dataset Generation
+## 2. Interactive Web UI Dashboard & Overlap Studio
+
+Launch the full-screen interactive Lunar Intelligence Dashboard with Lunar GIS footprint map, catalog browser, and POC 2 Patch Studio:
+```bash
+python scripts/launch_dashboard.py
+```
+Open **[http://localhost:8000](http://localhost:8000)** in any browser.
+
+---
+
+## 3. Quick Start: Benchmark Dataset Generation
 
 Generate co-registered benchmark observations (Chandrayaan-2 OHRC + LRO NAC + TMC-2 over the Lunar South Pole Boguslawsky region):
 ```bash
-python3 scripts/download_lunar_data.py --benchmark
+python scripts/download_lunar_data.py --benchmark
 ```
+
 
 ---
 
@@ -88,7 +100,32 @@ python3 scripts/query_catalog.py --min-lat -75 --max-lat -70 --min-lon 20 --max-
 
 ---
 
-## 6. Directory Layout
+## 6. POC 2: Geographic Overlap & Resolution-Aware Patch Extraction
+
+Extract physical co-registered image patches between multi-sensor observations (e.g., Chandrayaan-2 OHRC vs. LRO NAC):
+
+### Extract patches for all overlapping pairs in catalog:
+```bash
+python scripts/extract_overlap_patches.py --all-pairs --patch-size 512 --stride 256
+```
+
+### Extract patches for specific observation IDs:
+```bash
+python scripts/extract_overlap_patches.py \
+  --source-id ch2_ohr_ncp_20230915t041230_boguslawsky_d18 \
+  --reference-id M1345982701LR_BOGUSLAWSKY_REF \
+  --patch-size 256 --stride 128 \
+  --strategy match_coarser
+```
+
+### Output:
+- Saves paired patches (`patch_0001_src.png`, `patch_0001_ref.png`) to `data/processed/patches/<pair_id>/`.
+- Generates `patch_manifest.json` containing ground coordinates, resolution, overlap percentage, and confidence score.
+
+---
+
+## 7. Directory Layout
+
 
 ```text
 SIH-Lunar/

@@ -148,6 +148,14 @@ class LunarDataCatalog:
 
                 if overlap_pct_src >= min_overlap_pct or overlap_pct_ref >= min_overlap_pct:
                     min_x, min_y, max_x, max_y = intersection.bounds
+                    
+                    # Calculate ground area in km^2 on Moon (radius 1737.4 km)
+                    import math
+                    lat_dist_km = abs(max_y - min_y) * (1737400.0 * 2.0 * math.pi / 360.0 / 1000.0)
+                    center_lat_rad = math.radians((min_y + max_y) / 2.0)
+                    lon_dist_km = abs(max_x - min_x) * (1737400.0 * 2.0 * math.pi / 360.0 / 1000.0) * max(0.01, math.cos(center_lat_rad))
+                    area_km2 = round(lat_dist_km * lon_dist_km, 4)
+
                     pairs.append({
                         "source_product_id": src.product_id,
                         "source_sensor": src.sensor.value,
@@ -155,6 +163,7 @@ class LunarDataCatalog:
                         "reference_sensor": ref.sensor.value,
                         "overlap_percent_of_source": round(overlap_pct_src, 2),
                         "overlap_percent_of_reference": round(overlap_pct_ref, 2),
+                        "overlap_area_km2": area_km2,
                         "intersection_bbox": {
                             "min_lat": min_y,
                             "max_lat": max_y,
@@ -171,3 +180,48 @@ class LunarDataCatalog:
         # Sort by highest overlap percentage
         pairs.sort(key=lambda p: p["overlap_percent_of_source"], reverse=True)
         return pairs
+
+    def extract_patches_for_pairs(
+        self,
+        source_sensor: SensorType = SensorType.OHRC,
+        reference_sensor: SensorType = SensorType.LRO_NAC,
+        min_overlap_pct: float = 5.0,
+        patch_size: int = 512,
+        stride: Optional[int] = None,
+        output_dir: Union[str, Path] = "data/processed/patches",
+    ) -> List[Dict[str, Any]]:
+        """Finds overlapping pairs and extracts resolution-harmonized patches for each pair."""
+        from .patch_extractor import OverlapPatchExtractor
+        from .models import PatchExtractionConfig
+
+        config = PatchExtractionConfig(
+            patch_size=patch_size,
+            stride=stride,
+            min_overlap_pct=min_overlap_pct,
+        )
+        extractor = OverlapPatchExtractor(config=config)
+        pairs = self.find_overlapping_pairs(
+            source_sensor=source_sensor,
+            reference_sensor=reference_sensor,
+            min_overlap_pct=min_overlap_pct,
+        )
+
+        manifests = []
+        for pair_info in pairs:
+            src_obs = self.get_by_id(pair_info["source_product_id"])
+            ref_obs = self.get_by_id(pair_info["reference_product_id"])
+            if src_obs and ref_obs:
+                try:
+                    manifest = extractor.extract_patch_pairs(
+                        source_obs=src_obs,
+                        reference_obs=ref_obs,
+                        output_dir=output_dir,
+                    )
+                    manifests.append(json.loads(manifest.model_dump_json()))
+                except Exception as e:
+                    logger.warning(
+                        f"Failed to extract patches for pair {src_obs.product_id} & {ref_obs.product_id}: {e}"
+                    )
+
+        return manifests
+

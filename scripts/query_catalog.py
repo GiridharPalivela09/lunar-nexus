@@ -50,7 +50,7 @@ def main():
         obs_list = catalog.list_observations()
         print(f"\n=== Lunar Data Catalog ({len(obs_list)} products) ===")
         for obs in obs_list:
-            print(f"• [{obs.sensor.value}] {obs.product_id}")
+            print(f"* [{obs.sensor.value}] {obs.product_id}")
             print(f"    Mission: {obs.mission.value} | Res: {obs.spatial_resolution_m}m")
             print(f"    Bounds: Lat [{obs.bbox.min_lat:.2f}, {obs.bbox.max_lat:.2f}], Lon [{obs.bbox.min_lon:.2f}, {obs.bbox.max_lon:.2f}]")
             print(f"    Primary Image: {obs.primary_image_path or 'N/A'}")
@@ -59,7 +59,7 @@ def main():
     if args.find_pairs:
         src_sensor = SensorType(args.source)
         ref_sensor = SensorType(args.reference)
-        print(f"\nSearching for overlapping pairs: {src_sensor.value} ⟷ {ref_sensor.value} (Min overlap: {args.min_overlap}%)...")
+        print(f"\nSearching for overlapping pairs: {src_sensor.value} <-> {ref_sensor.value} (Min overlap: {args.min_overlap}%)...")
         pairs = catalog.find_overlapping_pairs(
             source_sensor=src_sensor,
             reference_sensor=ref_sensor,
@@ -76,7 +76,7 @@ def main():
             print(f"    REFERENCE: [{p['reference_sensor']}] {p['reference_product_id']} ({p['reference_resolution_m']}m)")
             print(f"    OVERLAP:   {p['overlap_percent_of_source']}% of source | {p['overlap_percent_of_reference']}% of reference")
             print(f"    ROI BBOX:  Lat [{p['intersection_bbox']['min_lat']:.2f}, {p['intersection_bbox']['max_lat']:.2f}], Lon [{p['intersection_bbox']['min_lon']:.2f}, {p['intersection_bbox']['max_lon']:.2f}]")
-            print(f"    Δ INCIDENCE ANGLE: {p['solar_incidence_diff_deg']:.1f}°\n")
+            print(f"    INCIDENCE ANGLE DELTA: {p['solar_incidence_diff_deg']:.1f} deg\n")
         return
 
     # Spatial query
@@ -93,7 +93,7 @@ def main():
     results = catalog.query(query)
     print(f"\nFound {len(results)} matching observation(s):")
     for obs in results:
-        print(f"• [{obs.sensor.value}] {obs.product_id} | Lat [{obs.bbox.min_lat:.2f}, {obs.bbox.max_lat:.2f}] Lon [{obs.bbox.min_lon:.2f}, {obs.bbox.max_lon:.2f}]")
+        print(f"* [{obs.sensor.value}] {obs.product_id} | Lat [{obs.bbox.min_lat:.2f}, {obs.bbox.max_lat:.2f}] Lon [{obs.bbox.min_lon:.2f}, {obs.bbox.max_lon:.2f}]")
 
 
 if __name__ == "__main__":
