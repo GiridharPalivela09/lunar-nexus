@@ -1,0 +1,959 @@
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 400, message Missing pair_id query parameter
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest HTTP/1.1" 400 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/registration/methods HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/science/first_principles HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/summary HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/unknown_non_existent_route HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0002_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0004_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0002_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0004_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0003_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0003_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 7 demo artifacts not generated yet. Run scripts/demo_poc7.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc7/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET / HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/nexus_3d/nexus_blender_digital_twin.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/scale_pyramid.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/registration_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc4/illumination_scale_heatmap.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/query_retrieval_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/retrieval_score_distribution.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/similarity_ranking_curve.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/ablation_baseline_comparison.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/cross_sensor_embedding_space.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc5/failure_analysis_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/geometric_verification_gallery.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/inlier_ratio_vs_confidence.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/spatial_distribution_inliers.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/confidence_score_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/accepted_vs_rejected_scatter.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc6/xai_rejection_reasons_breakdown.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/knowledge_graph_overview.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/slope_analysis_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/terrain_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/illumination_shadow_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/resource_indicator_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/hazard_intelligence_map.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message File not found
+INFO:nexus.dashboard:127.0.0.1 - "GET /outputs/poc7/candidate_site_explanation.png HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 4 results not found. Run scripts/demo_poc4.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc4/results HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 5 demo artifacts not generated yet. Run scripts/demo_poc5.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc5/demo HTTP/1.1" 404 -
+INFO:nexus.dashboard:127.0.0.1 - code 404, message POC 6 demo artifacts not generated yet. Run scripts/demo_poc6.py
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/poc6/demo HTTP/1.1" 404 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/catalog HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -
+INFO:nexus.data.catalog:Loaded 10 items from catalog C:\Users\hp\OneDrive\Desktop\lunar-nexus\data\catalog.json
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/pairs HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/manifest?pair_id=ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/ohrc/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/ch2_ohr_ncp_20230915t041230_boguslawsky_d18.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/tmc2/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet/ch2_tmc_ncn_20230915t041000_boguslawsky_triplet.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/M1345982701LR_BOGUSLAWSKY_REF/M1345982701LR_BOGUSLAWSKY_REF.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961le/nac.m1417928961le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417928961re/nac.m1417928961re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126le/nac.m1417929126le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929126re/nac.m1417929126re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1417929185le/nac.m1417929185le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916le/nac.m1419447916le_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/raw/lro_nac/nac.m1419447916re/nac.m1419447916re_preview.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/ch2_ohr_ncp_20230915t041230_boguslawsky_d18/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_ref.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /data/processed/patches/ch2_ohr_ncp_20230915t041230_boguslawsky_d18___M1345982701LR_BOGUSLAWSKY_REF/patch_0001_src.png HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/v1/observations/M1345982701LR_BOGUSLAWSKY_REF/preview HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/science/first_principles HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "POST /api/nexus/science/simulate HTTP/1.1" 200 -
+INFO:nexus.dashboard:127.0.0.1 - "GET /api/nexus/blender/status HTTP/1.1" 200 -

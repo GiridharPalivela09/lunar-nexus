@@ -65,8 +65,11 @@ def extract_features(
         gray = norm.astype(np.uint8)
 
     if method == FeatureMethod.SIFT or method == FeatureMethod.ROOT_SIFT:
-        sift = cv2.SIFT_create(nfeatures=max_keypoints, contrastThreshold=0.03, edgeThreshold=10)
+        sift = cv2.SIFT_create(nfeatures=max_keypoints, contrastThreshold=0.01, edgeThreshold=10)
         keypoints, descriptors = sift.detectAndCompute(gray, None)
+        if keypoints is None or len(keypoints) < 15:
+            sift_fallback = cv2.SIFT_create(nfeatures=max_keypoints, contrastThreshold=0.005, edgeThreshold=10)
+            keypoints, descriptors = sift_fallback.detectAndCompute(gray, None)
         if method == FeatureMethod.ROOT_SIFT and descriptors is not None:
             descriptors = apply_rootsift_normalization(descriptors)
         return keypoints, descriptors

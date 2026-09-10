@@ -2513,6 +2513,18 @@ function renderEmptyPatchesGrid(pair) {
     </div>
   `;
   document.getElementById('patchStatsPills').innerHTML = '';
+
+  // Show placeholder, hide empty images and divider
+  const placeholder = document.getElementById('stagePlaceholder');
+  if (placeholder) placeholder.style.display = 'flex';
+  const divider = document.getElementById('dividerLine');
+  if (divider) divider.style.display = 'none';
+  const imgRef = document.getElementById('imgRefView');
+  const imgSrc = document.getElementById('imgSrcView');
+  if (imgRef) { imgRef.style.display = 'none'; imgRef.removeAttribute('src'); }
+  if (imgSrc) { imgSrc.style.display = 'none'; imgSrc.removeAttribute('src'); }
+  const lbl = document.getElementById('currentPatchLabel');
+  if (lbl) lbl.innerText = 'No Active Patch';
 }
 
 function renderPatchesGrid(manifest) {
@@ -2540,11 +2552,11 @@ function renderPatchesGrid(manifest) {
       </div>
       <div class="patch-dual-thumbnails">
         <div class="thumb-item">
-          <img src="${srcImgUrl}" alt="Source Patch" loading="lazy">
+          <img src="${srcImgUrl}" alt="Source Patch" loading="lazy" onerror="this.style.opacity='0.2'">
           <span class="thumb-label">Source</span>
         </div>
         <div class="thumb-item">
-          <img src="${refImgUrl}" alt="Reference Patch" loading="lazy">
+          <img src="${refImgUrl}" alt="Reference Patch" loading="lazy" onerror="this.style.opacity='0.2'">
           <span class="thumb-label">Reference</span>
         </div>
       </div>
@@ -2564,7 +2576,7 @@ function renderPatchesGrid(manifest) {
   });
 
   // Load first patch into split viewer
-  if (manifest.patches.length > 0) {
+  if (manifest.patches && manifest.patches.length > 0) {
     const first = manifest.patches[0];
     const srcImgUrl = `/data/processed/patches/${manifest.source_product_id}___${manifest.reference_product_id}/${first.source_patch_path.split('\\').pop().split('/').pop()}`;
     const refImgUrl = `/data/processed/patches/${manifest.source_product_id}___${manifest.reference_product_id}/${first.reference_patch_path.split('\\').pop().split('/').pop()}`;
@@ -2574,13 +2586,28 @@ function renderPatchesGrid(manifest) {
 
 function loadPatchIntoViewer(patch, srcImgUrl, refImgUrl) {
   state.activePatch = patch;
-  document.getElementById('currentPatchLabel').innerText = `Patch #${patch.patch_index.toString().padStart(4, '0')}`;
+  const lbl = document.getElementById('currentPatchLabel');
+  if (lbl) lbl.innerText = `Patch #${patch.patch_index.toString().padStart(4, '0')}`;
   
+  const placeholder = document.getElementById('stagePlaceholder');
+  if (placeholder) placeholder.style.display = 'none';
+
+  const divider = document.getElementById('dividerLine');
+  if (divider) divider.style.display = 'block';
+
   const imgRef = document.getElementById('imgRefView');
   const imgSrc = document.getElementById('imgSrcView');
   
-  imgRef.src = refImgUrl;
-  imgSrc.src = srcImgUrl;
+  if (imgRef) {
+    imgRef.style.display = 'block';
+    imgRef.src = refImgUrl;
+    imgRef.onerror = () => { imgRef.style.display = 'none'; };
+  }
+  if (imgSrc) {
+    imgSrc.style.display = 'block';
+    imgSrc.src = srcImgUrl;
+    imgSrc.onerror = () => { imgSrc.style.display = 'none'; };
+  }
 }
 
 // ==========================================================================

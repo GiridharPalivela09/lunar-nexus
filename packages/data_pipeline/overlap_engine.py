@@ -24,9 +24,17 @@ from PIL import Image
 from shapely.geometry import Polygon, MultiPolygon, mapping, box
 from shapely.validation import make_valid
 import pyproj
-import rasterio
-from rasterio.windows import Window, from_bounds
-from rasterio.enums import Resampling
+try:
+    import rasterio
+    from rasterio.windows import Window, from_bounds
+    from rasterio.enums import Resampling
+    HAS_RASTERIO = True
+except ImportError:
+    rasterio = None
+    Window = None
+    from_bounds = None
+    Resampling = None
+    HAS_RASTERIO = False
 
 from .footprint_engine import (
     FootprintEngine,
@@ -429,6 +437,11 @@ class OverlapEngine:
     ) -> Tuple[Path, Tuple[int, int]]:
         """Projects the common geographic footprint into the raster's CRS,
         computes the pixel window, extracts native pixels, and saves the patch."""
+        if not HAS_RASTERIO:
+            raise ImportError(
+                "The 'rasterio' package is required to crop georeferenced raster files. "
+                "Install it using: pip install rasterio"
+            )
         with rasterio.open(raster_path) as src:
             # Transform common (lon, lat) polygon to raster native CRS
             transformer = pyproj.Transformer.from_crs(

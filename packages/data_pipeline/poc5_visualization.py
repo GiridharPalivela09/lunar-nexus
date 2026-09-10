@@ -14,10 +14,17 @@ import os
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.gridspec import GridSpec
+    HAS_MATPLOTLIB = True
+except ImportError:
+    matplotlib = None
+    plt = None
+    GridSpec = None
+    HAS_MATPLOTLIB = False
 
 
 DARK_THEME = {

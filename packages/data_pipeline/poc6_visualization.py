@@ -15,11 +15,19 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Union
 import numpy as np
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-from matplotlib.lines import Line2D
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as patches
+    from matplotlib.lines import Line2D
+    HAS_MATPLOTLIB = True
+except ImportError:
+    matplotlib = None
+    plt = None
+    patches = None
+    Line2D = None
+    HAS_MATPLOTLIB = False
 
 from .poc6_verification import VerifiedCandidateMatch
 

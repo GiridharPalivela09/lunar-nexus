@@ -13,10 +13,17 @@ from typing import Dict, Any, Optional, Tuple, Union, List
 import logging
 import numpy as np
 from PIL import Image
-import matplotlib
-matplotlib.use("Agg")  # Non-interactive backend
-import matplotlib.pyplot as plt
-from matplotlib.patches import Polygon as MplPolygon
+try:
+    import matplotlib
+    matplotlib.use("Agg")  # Non-interactive backend
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import Polygon as MplPolygon
+    HAS_MATPLOTLIB = True
+except ImportError:
+    matplotlib = None
+    plt = None
+    MplPolygon = None
+    HAS_MATPLOTLIB = False
 from shapely.geometry import Polygon, MultiPolygon
 
 from .footprint_engine import FootprintResult
@@ -35,6 +42,11 @@ def generate_overlap_visualization(
     intersection_area_km2: float = 0.0,
 ) -> Path:
     """Generates a geographic footprint map showing source, reference, and intersection."""
+    if not HAS_MATPLOTLIB:
+        raise ImportError(
+            "matplotlib is required to generate overlap visualizations. "
+            "Install it using: pip install matplotlib"
+        )
     out_p = Path(output_path)
     out_p.parent.mkdir(parents=True, exist_ok=True)
 
@@ -171,6 +183,11 @@ def generate_patch_comparison_visualization(
     output_path: Union[str, Path],
 ) -> Path:
     """Generates a side-by-side comparison figure showing corresponding native geographic patches."""
+    if not HAS_MATPLOTLIB:
+        raise ImportError(
+            "matplotlib is required to generate patch comparison visualizations. "
+            "Install it using: pip install matplotlib"
+        )
     out_p = Path(output_path)
     out_p.parent.mkdir(parents=True, exist_ok=True)
 

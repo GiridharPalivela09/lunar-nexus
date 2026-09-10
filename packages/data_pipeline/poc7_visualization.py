@@ -17,10 +17,17 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 import numpy as np
 
-import matplotlib
-matplotlib.use("Agg")  # Non-interactive headless backend
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
+try:
+    import matplotlib
+    matplotlib.use("Agg")  # Non-interactive headless backend
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as mpatches
+    HAS_MATPLOTLIB = True
+except ImportError:
+    matplotlib = None
+    plt = None
+    mpatches = None
+    HAS_MATPLOTLIB = False
 
 from packages.data_pipeline.poc7_knowledge_graph import SpatialKnowledgeGraph
 from packages.data_pipeline.poc7_models import (

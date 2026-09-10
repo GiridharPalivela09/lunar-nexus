@@ -13,10 +13,17 @@ from __future__ import annotations
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Union
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.gridspec import GridSpec
+    HAS_MATPLOTLIB = True
+except ImportError:
+    matplotlib = None
+    plt = None
+    GridSpec = None
+    HAS_MATPLOTLIB = False
 
 from .illumination_robustness import (
     generate_raw_image,

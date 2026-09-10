@@ -15,9 +15,17 @@ import numpy as np
 from shapely.geometry import Polygon, box, mapping
 from shapely.validation import make_valid
 import pyproj
-import rasterio
-from rasterio.crs import CRS
-from rasterio.transform import Affine
+
+try:
+    import rasterio
+    from rasterio.crs import CRS
+    from rasterio.transform import Affine
+    HAS_RASTERIO = True
+except ImportError:
+    rasterio = None
+    CRS = None
+    Affine = None
+    HAS_RASTERIO = False
 
 logger = logging.getLogger("nexus.data.footprint_engine")
 
@@ -115,6 +123,12 @@ class FootprintEngine:
 
     def extract_from_raster(self, raster_path: Union[str, Path]) -> FootprintResult:
         """Extracts the true lunar surface footprint directly from a georeferenced raster."""
+        if not HAS_RASTERIO:
+            raise ImportError(
+                "The 'rasterio' package is required to extract footprints directly from georeferenced raster files. "
+                "Install it using: pip install rasterio"
+            )
+
         p = Path(raster_path)
         if not p.exists():
             raise FileNotFoundError(f"Raster file not found: {p}")

@@ -6,6 +6,7 @@ spatial knowledge graph interactions, and the First-Principles PINN Scientific W
 import os
 from pathlib import Path
 import pytest
+pytest.importorskip("playwright")
 from playwright.sync_api import sync_playwright, Page, expect
 
 BASE_URL = os.environ.get("NEXUS_BASE_URL", "http://127.0.0.1:8000")
@@ -41,7 +42,7 @@ def page(browser_context) -> Page:
     page.on("console", on_console)
     page.on("pageerror", lambda err: console_errors.append(str(err)))
 
-    page.goto(BASE_URL, wait_until="networkidle")
+    page.goto(BASE_URL, wait_until="domcontentloaded")
     page.wait_for_timeout(1000)
 
     yield page

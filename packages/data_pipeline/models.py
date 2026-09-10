@@ -4,7 +4,7 @@ from __future__ import annotations
 from enum import Enum
 from typing import List, Optional, Dict, Any, Tuple
 from datetime import datetime, timezone
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 
 class SensorType(str, Enum):
@@ -23,10 +23,18 @@ class MissionType(str, Enum):
 
 
 class BoundingBox(BaseModel):
-    min_lat: float = Field(..., description="Minimum latitude in degrees (-90 to 90)")
-    max_lat: float = Field(..., description="Maximum latitude in degrees (-90 to 90)")
-    min_lon: float = Field(..., description="Minimum longitude in degrees (-180 to 180 or 0 to 360)")
-    max_lon: float = Field(..., description="Maximum longitude in degrees (-180 to 180 or 0 to 360)")
+    min_lat: float = Field(..., ge=-90.0, le=90.0, description="Minimum latitude in degrees (-90 to 90)")
+    max_lat: float = Field(..., ge=-90.0, le=90.0, description="Maximum latitude in degrees (-90 to 90)")
+    min_lon: float = Field(..., ge=-180.0, le=360.0, description="Minimum longitude in degrees (-180 to 180 or 0 to 360)")
+    max_lon: float = Field(..., ge=-180.0, le=360.0, description="Maximum longitude in degrees (-180 to 180 or 0 to 360)")
+
+    @model_validator(mode="after")
+    def validate_bounds_order(self) -> "BoundingBox":
+        if self.min_lat > self.max_lat:
+            raise ValueError(f"Inverted latitude bounds: min_lat ({self.min_lat}) > max_lat ({self.max_lat})")
+        if self.min_lon > self.max_lon:
+            raise ValueError(f"Inverted longitude bounds: min_lon ({self.min_lon}) > max_lon ({self.max_lon})")
+        return self
 
     @property
     def center(self) -> Tuple[float, float]:
@@ -57,7 +65,7 @@ class ObservationGeometry(BaseModel):
 
 
 class LunarObservation(BaseModel):
-    product_id: str = Field(..., description="Unique product identifier (e.g. ch2_ohr_ncp_..., M1144485705LR)")
+    product_id: str = Field(..., min_length=1, description="Unique product identifier (e.g. ch2_ohr_ncp_..., M1144485705LR)")
     mission: MissionType
     sensor: SensorType
     acquisition_time: Optional[datetime] = None
@@ -68,6 +76,20 @@ class LunarObservation(BaseModel):
         default=None, description="Detailed (lon, lat) polygon boundary coordinates"
     )
     geometry: ObservationGeometry = Field(default_factory=ObservationGeometry)
+
+    @field_validator("spatial_resolution_m")
+    @classmethod
+    def validate_positive_resolution(cls, v: Optional[float]) -> Optional[float]:
+        if v is not None and v <= 0:
+            raise ValueError(f"Spatial resolution must be positive, got {v}")
+        return v
+
+    @field_validator("product_id")
+    @classmethod
+    def validate_non_empty_id(cls, v: str) -> str:
+        if not v or not v.strip():
+            raise ValueError("product_id cannot be empty or whitespace only")
+        return v.strip()
     
     # File locations
     primary_image_path: Optional[str] = None
@@ -90,7 +112,7 @@ class LunarObservation(BaseModel):
             "sensor": self.sensor.value,
             "acquisition_time": self.acquisition_time.isoformat() if self.acquisition_time else None,
             "resolution_m": self.spatial_resolution_m,
-            "bbox": self.bbox.dict(),
+            "bbox": self.bbox.model_dump(),
             "center": self.bbox.center,
             "primary_image": self.primary_image_path,
             "preview_image": self.preview_image_path,

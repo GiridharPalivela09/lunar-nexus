@@ -5,6 +5,8 @@ import os
 import sys
 import time
 from pathlib import Path
+import pytest
+pytest.importorskip("playwright")
 from playwright.sync_api import sync_playwright
 
 # Ensure project root is in sys.path
